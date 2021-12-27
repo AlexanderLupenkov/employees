@@ -20,7 +20,7 @@ public class EmployeeMapper {
         return mapper.map(employee, EmployeeDto.class);
     }
 
-    public Employee toDbo(EmployeeDto employeeDto) {
+    public Employee toEntity(EmployeeDto employeeDto) {
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STANDARD);
         return mapper.map(employeeDto, Employee.class);
     }
