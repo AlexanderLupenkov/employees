@@ -21,8 +21,5 @@ public interface EmployeeRepository {
 
     Long count();
 
-//  @Select("select c from Contact c " +
-//            "where lower(c.firstName) like lower(concat('%',:string,'%'))" +
-//            "or lower(c.lastName) like lower(concat('%',:string,'%'))")
-//  List<Employee> search(String string);
+    List<Employee> search(String string);
 }

@@ -42,8 +42,27 @@
     </insert>
 
     <delete id="delete" parameterType="com.altech.employees.domain.entity.Employee">
-        delete from employee
-        where id = #{employee.id}
+        delete
+        from employee
+        where id = #{id}
     </delete>
+
+
+    <select id="search" parameterType="java.lang.String" resultMap="employee">
+        select *
+        from employee e
+        where lower(e.firstName) like lower(concat('%', #{string}, '%'))
+           or lower(e.lastName) like lower(concat('%', #{string}, '%'))
+    </select>
+
+    <update id="update" parameterType="com.altech.employees.domain.entity.Employee">
+        update employee
+        set firstName=#{firstName},
+            lastName=#{lastName},
+            email=#{email},
+            organizationId=#{organization.id},
+            statusId=#{status.id}
+        where id = #{id}
+    </update>
 
 </mapper>
