@@ -3,14 +3,19 @@ package com.altech.employees;
 import com.altech.employees.domain.entity.Employee;
 import com.altech.employees.domain.entity.Organization;
 import com.altech.employees.domain.entity.Status;
+import com.vaadin.flow.component.dependency.NpmPackage;
 import org.apache.ibatis.type.MappedTypes;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.vaadin.artur.helpers.LaunchUtil;
 
 @SpringBootApplication
 @MappedTypes({Employee.class, Organization.class, Status.class})
-public class EmployeesApplication {
+@NpmPackage(value = "lumo-css-framework", version = "^4.0.10")
+@NpmPackage(value = "line-awesome", version = "1.3.0")
+public class EmployeesApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
-        SpringApplication.run(EmployeesApplication.class, args);
+        LaunchUtil.launchBrowserInDevelopmentMode(SpringApplication.run(EmployeesApplication.class, args));
     }
 }
