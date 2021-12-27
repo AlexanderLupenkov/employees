@@ -10,6 +10,5 @@ import javax.validation.constraints.NotBlank;
 public class Organization {
     private Integer id;
 
-    @NotBlank
     private String name;
 }
