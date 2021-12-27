@@ -1,0 +1,27 @@
+<!DOCTYPE mapper     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.altech.employees.repository.MBOrganizationMapper">
+    <resultMap id="organization" type="com.altech.employees.domain.entity.Organization">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="organization">
+        SELECT *
+        from organization;
+    </select>
+
+    <select id="findById" resultMap="organization" parameterType="java.lang.Integer">
+        SELECT *
+        from organization
+        where id = #{id};
+    </select>
+
+    <insert id="saveAll" parameterType="java.util.List">
+        insert into organization(name)
+        values
+        <foreach collection="list" item="element" index="index" open="(" separator="),(" close=")">
+            #{element.name}
+        </foreach>
+    </insert>
+
+</mapper>
