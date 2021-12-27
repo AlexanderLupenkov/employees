@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 public class Employee {
+    private Integer id;
 
     @NotEmpty
     private String firstName = "";

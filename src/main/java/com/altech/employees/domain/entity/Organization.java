@@ -4,14 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
-import java.util.LinkedList;
-import java.util.List;
 
 @Getter
 @Setter
 public class Organization {
+    private Integer id;
+
     @NotBlank
     private String name;
-
-    private List<Employee> employees = new LinkedList<>();
 }

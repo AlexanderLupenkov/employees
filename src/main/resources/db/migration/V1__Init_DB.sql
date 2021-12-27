@@ -12,7 +12,7 @@ create table status
     primary key (id)
 );
 
-create table employees
+create table employee
 (
     id             integer auto_increment,
     firstName      varchar(30) not null,
