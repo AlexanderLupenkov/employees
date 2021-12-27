@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 @Mapper
-public interface MBOrganizationMapper {
+public interface OrganizationRepository {
     List<Organization> findAll();
 
     Organization findById(Integer id);

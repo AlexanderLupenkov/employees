@@ -1,5 +1,5 @@
 <!DOCTYPE mapper     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.altech.employees.repository.MBEmployeeMapper">
+<mapper namespace="com.altech.employees.repository.EmployeeRepository">
     <resultMap id="employee" type="com.altech.employees.domain.entity.Employee">
         <id column="id" property="id"/>
         <result column="firstName" property="firstName"/>
@@ -8,12 +8,12 @@
         <association property="organization"
                      column="organizationId"
                      javaType="com.altech.employees.domain.entity.Organization"
-                     select="com.altech.employees.repository.MBOrganizationMapper.findById"
+                     select="com.altech.employees.repository.OrganizationRepository.findById"
                      fetchType="eager"/>
         <association property="status"
                      column="statusId"
                      javaType="com.altech.employees.domain.entity.Status"
-                     select="com.altech.employees.repository.MBStatusMapper.findById"
+                     select="com.altech.employees.repository.StatusRepository.findById"
                      fetchType="eager"/>
     </resultMap>
 

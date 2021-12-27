@@ -3,9 +3,9 @@ package com.altech.employees.utils.generator;
 import com.altech.employees.domain.entity.Employee;
 import com.altech.employees.domain.entity.Organization;
 import com.altech.employees.domain.entity.Status;
-import com.altech.employees.repository.MBEmployeeMapper;
-import com.altech.employees.repository.MBOrganizationMapper;
-import com.altech.employees.repository.MBStatusMapper;
+import com.altech.employees.repository.EmployeeRepository;
+import com.altech.employees.repository.OrganizationRepository;
+import com.altech.employees.repository.StatusRepository;
 import com.vaadin.exampledata.DataType;
 import com.vaadin.exampledata.ExampleDataGenerator;
 import com.vaadin.flow.spring.annotation.SpringComponent;
@@ -24,8 +24,8 @@ import java.util.stream.Stream;
 public class DataGenerator {
 
     @Bean
-    public CommandLineRunner loadData(MBEmployeeMapper employeeMapper, MBOrganizationMapper organizationMapper,
-                                      MBStatusMapper statusMapper) {
+    public CommandLineRunner loadData(EmployeeRepository employeeMapper, OrganizationRepository organizationMapper,
+                                      StatusRepository statusMapper) {
 
         return args -> {
             Logger logger = LoggerFactory.getLogger(getClass());
