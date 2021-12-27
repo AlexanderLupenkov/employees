@@ -13,7 +13,7 @@
     <select id="findById" resultMap="organization" parameterType="java.lang.Integer">
         SELECT *
         from organization
-        where id = #{id};
+        where id = #{organization.id};
     </select>
 
     <insert id="saveAll" parameterType="java.util.List">

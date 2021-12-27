@@ -29,7 +29,7 @@
 
     <insert id="save" useGeneratedKeys="true" keyProperty="id">
         insert into employee(firstname, lastname, email, organizationId, statusID)
-        values (#{firstName}, #{lastName}, #{email}, #{organization.getId()}, #{status.getId()})
+        values (#{firstName}, #{lastName}, #{email}, #{organization.id}, #{status.id})
     </insert>
 
     <insert id="saveAll" parameterType="java.util.List">
