@@ -24,4 +24,10 @@
         </foreach>
     </insert>
 
+    <select id="getEmployeeCount" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+        select count(e.id)
+        from employee e
+        where e.organizationId = #{id}
+    </select>
+
 </mapper>

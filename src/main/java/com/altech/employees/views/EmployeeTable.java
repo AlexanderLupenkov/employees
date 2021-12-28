@@ -15,8 +15,7 @@ import com.vaadin.flow.theme.Theme;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Route(value = "/")
-@Theme(themeFolder = "flowcrmtutorial")
+@Route(value = "", layout = MainLayout.class)
 @PageTitle("Employees")
 @AllArgsConstructor
 public class EmployeeTable extends VerticalLayout {

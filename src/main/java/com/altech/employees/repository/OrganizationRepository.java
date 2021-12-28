@@ -12,4 +12,6 @@ public interface OrganizationRepository {
     Organization findById(Integer id);
 
     void saveAll(List<Organization> organizations);
+
+    Integer getEmployeeCount(Integer orgId);
 }

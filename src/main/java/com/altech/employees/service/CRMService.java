@@ -58,4 +58,8 @@ public class CRMService {
     public List<StatusDto> findAllStatuses() {
         return statusMapper.toDtoList(statusRepository.findAll());
     }
+
+    public Integer getEmployeeCount(Integer id) {
+        return organizationRepository.getEmployeeCount(id);
+    }
 }
