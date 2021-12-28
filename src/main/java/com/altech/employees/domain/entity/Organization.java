@@ -8,6 +8,7 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @Setter
 public class Organization {
+
     private Integer id;
 
     private String name;

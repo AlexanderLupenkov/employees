@@ -10,7 +10,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Status {
+
     private Integer id;
+
     private String name;
 
     public Status(String name) {
