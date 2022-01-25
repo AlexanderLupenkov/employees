@@ -1,2 +1,2 @@
 # employees
-## Basic CRUD application for learning MyBatis+Vaadin
+## Basic CRUD application using MyBatis, Vaadin and Spring Boot.
